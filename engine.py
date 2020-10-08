@@ -1,15 +1,24 @@
 def create_board(width, height):
-    '''
-    Creates a new game board based on input parameters.
+    board = []
+    upper =['$']* width
 
-    Args:
-    int: The width of the board
-    int: The height of the board
-
-    Returns:
-    list: Game board
-    '''
-    pass
+    for row in range(height):
+        line =[]
+        if row == 0 or row ==height -1:
+            line.append(upper)
+        else:
+            for col in range(width):
+                if col ==0 or col == width -1:
+                    line.append('$')
+                else:
+                    if col ==5 and row  ==5:
+                        line.append('£')
+                    else:
+                        line.appned('.')
+            board.append(line)
+print(create_board(4,6))
+    # return board
+    # pass
 
 
 def put_player_on_board(board, player):
