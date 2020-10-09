@@ -1,23 +1,26 @@
 def create_board(width, height):
     board = []
-    upper =['$']* width
+    upper =['@']* width
 
     for row in range(height):
         line =[]
-        if row == 0 or row ==height -1:
+        if row == 0 or row == height -1:
             line.append(upper)
+            print(row)
         else:
             for col in range(width):
                 if col ==0 or col == width -1:
-                    line.append('$')
+                    line.append('@')
+                    print(line)
                 else:
-                    if col ==5 and row  ==5:
-                        line.append('£')
+                    if col == 5 and row  == 5:
+                        line.append('-')
+                        print(line)
                     else:
-                        line.appned('.')
-            board.append(line)
+                        line.append('.')
+    board.append(line)
 print(create_board(4,6))
-    # return board
+#     # return board
     # pass
 
 
